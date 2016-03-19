@@ -8,11 +8,17 @@ from django.contrib.auth.models import User
 class Ship(models.Model):
     """A startship."""
 
-    name = models.CharField(max_length=128)
+    name = models.CharField(max_length=128, unique=True)
     capacity = models.IntegerField(
         blank=True, null=True, help_text='Max number of passengers'
     )
-    passengers = models.ManyToManyField(User, blank=True)
+    passengers = models.ManyToManyField(User, blank=True, related_name='ships')
+    # todo: add number of crew and passengers, and some way to determine if a
+    # passenger is crew or passenger
+
+    def __unicode__(self):
+        """Repr."""
+        return u'{self.name}'.format(self=self)
 
 
 class Log(models.Model):
@@ -23,3 +29,7 @@ class Log(models.Model):
     message = models.TextField(null=True, blank=True)
     title = models.CharField(max_length=128)
     captains_log = models.BooleanField(default=False, blank=True)
+
+    def __unicode__(self):
+        """Repr."""
+        return u'{self.ship} - {self.user} - {self.title}'.format(self=self)
