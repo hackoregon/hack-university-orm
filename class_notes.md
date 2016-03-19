@@ -60,25 +60,26 @@ Most ORMS allow the use of raw sql when desired. Normally, this is to fulfill on
 
 ### Basics (99% of your time with Django-ORM)
 
-CRUD
-Filtering and Excluding
-Joins
-.all, .none, and .count
-Update (prevent race conditions) and Delete
+- CRUD
+- Filtering and Excluding
+- Joins
+- .all, .none, and .count
+- Update (prevent race conditions) and Delete
 
 ### Intermediate
-Aggregations: AVG, MAX, MIN, SUM
-Group By: COUNT
-Bulk create
+
+- Aggregations: AVG, MAX, MIN, SUM
+- Group By: COUNT
+- Bulk create
 
 ### Advanced
 
-Select related & prefetch related
-Q
-F
-Extending Query and QuerySet
-.raw and .extra
-connection queries & cache (profiling and debugging)
+- Select related & prefetch related
+- Q
+- F
+- Extending Query and QuerySet
+- .raw and .extra
+- connection queries & cache (profiling and debugging)
 
 
 ### Group By Example
