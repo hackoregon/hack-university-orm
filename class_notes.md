@@ -55,6 +55,24 @@ JSONB anyone
 
 Most ORMS allow the use of raw sql when desired. Normally, this is to fulfill one of two conditions: there's a complex query or unique query or stored procedure that the ORM cannot form or the ORM is getting in way and mangling a simple query. 
 
+```pycon
+In [33]: for c in Crimedataraw.objects.raw('SELECT * FROM crimedataraw'):
+    print(c.__dict__)
+    break
+   ....:
+{'_state': <django.db.models.base.ModelState at 0x10a2a3f10>,
+ 'address': u'Unknown/Not Available',
+ 'id': 10,
+ 'majoroffensetype': u'Sex Offenses',
+ 'neighborhood': u'SOUTH PORTLAND',
+ 'policedistrict': u'890',
+ 'policeprecinct': u'PORTLAND PREC CE',
+ 'recordid': 14282253,
+ 'reportdate': datetime.date(2014, 1, 6),
+ 'reporttime': datetime.time(9, 25),
+ 'xcoordinate': None,
+ 'ycoordinate': None}
+```
 
 ## The Django ORM
 
@@ -130,3 +148,17 @@ Most ORMs provide a way to integrate with an existing data base, whether to migr
 ```console
 python manage.py inspectdb > models.py
 ```
+
+## Entity-Relationship Diagram (ERD)
+
+A visual representation of the relations can be generated from the Django ORM via the third-party-app `django-extensions`, which provides the Django management command [`graph_models`](http://django-extensions.readthedocs.org/en/latest/graph_models.html). 
+
+The install for `pygraphviz` can be cumbersome and on OSX requires the `graphviz` installed system-wide.
+
+One the python dependency `pip install pygraphviz` is available, an ERD of your app can be made easily.
+
+```pycon
+python manage.py graph_models logs --pygraphviz -o orms_erd.png
+```
+
+See the generated file [orms_erd.png](orms/orms_erd.png) to see what the ERD looks like for the `logs` app.
