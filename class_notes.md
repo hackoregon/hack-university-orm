@@ -36,20 +36,20 @@ Connecting to the database via the shell may feel very natural when needing to r
 
 The Django ORM was once described to me as providing the means to scale developers, especially developers without strong DB knowledge.  I don't think this is entirely true, but, without knowing SQL or how a relational database is created or typed, someone using Django can write, request.user.first_name and have the string first name of the web user without having to know a database was involved. 
 
-1:1 parity between DB rows and Python objects
-Pooling and open connections
-Idiomatic Error handling
-Multiple databases
+1:1 parity between DB rows and Python objects  
+Pooling and open connections  
+Idiomatic Error handling  
+Multiple databases  
 
 ## Disadvantages
 
-Constraints on modeling data (see SQLAlchemy vs. Django-ORM), what if an object is represented over multiple tables or a row in a table should represent multiple Python objects? 
-Bad queries: n+1
-Deep knowledge in making good queries: select-related, prefetch-related
-Configuration of DB is needed (though standard)
-SQL is not translated 1:1 to the ORM DSL
-New ideas like QuerySet
-JSONB anyone
+Constraints on modeling data (see SQLAlchemy vs. Django-ORM), what if an object is represented over multiple tables or a row in a table should represent multiple Python objects?   
+Bad queries: n+1  
+Deep knowledge in making good queries: select-related, prefetch-related  
+Configuration of DB is needed (though standard)  
+SQL is not translated 1:1 to the ORM DSL  
+New ideas like QuerySet  
+JSONB anyone  
 
 ## CYOA
 
@@ -60,6 +60,7 @@ Most ORMS allow the use of raw sql when desired. Normally, this is to fulfill on
 
 ### Basics (99% of your time with Django-ORM)
 
+- Migrations
 - CRUD
 - Filtering and Excluding
 - Joins
@@ -86,7 +87,7 @@ Most ORMS allow the use of raw sql when desired. Normally, this is to fulfill on
 
 #### Django
 
-```
+```pycon
 In [13]: qs = Crimedataraw.objects.values('neighborhood').annotate(n_count=Count('neighborhood'))
 
 In [14]: print(qs.query)
