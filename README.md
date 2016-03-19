@@ -67,6 +67,29 @@ Data has been saved to seed the data base for various parts of the class, to loa
 python manage.py loaddata exercise-1.json
 ```
 
+You'll want to **drop, create, and migrate** your data base before loading data if you wish to start with a fresh DB.
+
+```console
+dropdb orms
+createdb orms
+python manage.py migrate
+python manage.py loaddata exercise-1.json
+```
+
+From the shell, you should now have a data base populated with sample data.
+
+```console
+python manage.py shell_plus
+
+In [1]: User.objects.all()
+Out[1]: [<User: Lenard Dilucca>, <User: Carylon Ryant>, <User: Keira Diseth>]
+
+In [2]: Ship.objects.all()
+Out[2]: [<Ship: USS Enterprise>]
+
+In [3]: Log.objects.all()
+Out[3]: [<Log: USS Enterprise - Keira Diseth - Stardate 69683, all is well aboard the Enterprise>]
+```
 
 ## License
 The MIT License (MIT)
