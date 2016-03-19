@@ -1,7 +1,14 @@
 """logs Views."""
-from django.http import HttpResponse
+from annoying.decorators import render_to
 
 
+@render_to("logs/index.html")
 def index(request):
     """Return the main page."""
-    return HttpResponse("Hello, world. You're at the logs index.")
+    number_of_logs = 0
+    number_of_ships = 0
+    return {
+        'number_of_logs': number_of_logs,
+        'number_of_ships': number_of_ships,
+
+    }

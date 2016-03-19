@@ -161,4 +161,7 @@ One the python dependency `pip install pygraphviz` is available, an ERD of your 
 python manage.py graph_models logs --pygraphviz -o orms_erd.png
 ```
 
-See the generated file [orms_erd.png](orms/orms_erd.png) to see what the ERD looks like for the `logs` app.
+Here's the generated file for the `logs` app.
+
+![orms_erd.png](orms/orms_erd.png)
+
