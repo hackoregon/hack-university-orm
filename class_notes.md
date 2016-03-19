@@ -101,9 +101,19 @@ In [33]: for c in Crimedataraw.objects.raw('SELECT * FROM crimedataraw'):
 - connection queries & cache (profiling and debugging)
 
 
-### Group By Example
 
-#### Django
+
+## Introspection 
+What if a data base already exists and it was not created nor managed using the ORM
+you have at hand?
+
+Most ORMs provide a way to integrate with an existing data base, whether to migrate to a new application code base, to normalize over several different data base syntaxes (MySQL, PostgreSQL, Oracle, MS SQL, etc.), or because a developer is more familiar with a particular ORM. Django provides the management command [`inspectdb`](https://docs.djangoproject.com/en/1.9/howto/legacy-databases/)  
+
+```console
+python manage.py inspectdb > models.py
+```
+
+Then we can inspect that data via the Django ORM.  
 
 ```pycon
 In [13]: qs = Crimedataraw.objects.values('neighborhood').annotate(n_count=Count('neighborhood'))
@@ -137,16 +147,6 @@ Out[21]:
  u'NORTHWEST': 2047,
  u'PEARL': 1549,
  u'POWELHST-GILBRT': 2437}
-```
-
-## Introspection 
-What if a data base already exists and it was not created nor managed using the ORM
-you have at hand?
-
-Most ORMs provide a way to integrate with an existing data base, whether to migrate to a new application code base, to normalize over several different data base syntaxes (MySQL, PostgreSQL, Oracle, MS SQL, etc.), or because a developer is more familiar with a particular ORM. Django provides the management command [`inspectdb`](https://docs.djangoproject.com/en/1.9/howto/legacy-databases/)  
-
-```console
-python manage.py inspectdb > models.py
 ```
 
 ## Entity-Relationship Diagram (ERD)

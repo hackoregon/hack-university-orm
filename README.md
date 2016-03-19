@@ -1,6 +1,8 @@
 # hack-university-orm
 Intro to ORM
 
+### Class Notes
+[Class Notes](class_notes.md)
 
 ## Quick start
 
@@ -56,9 +58,6 @@ If you've already installed the dependencies you can activate the virtual enviro
 ```console
 source .virt/bin/activate
 ```
-
-### Class Notes
-See [Class Notes](class_notes.md)
 
 ### Loading data for the exercises
 Data has been saved to seed the data base for various parts of the class, to load these you'll want to use the django `loaddata` command.
