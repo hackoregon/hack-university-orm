@@ -26,7 +26,7 @@ source .virt/bin/activate
 ```
 
 ### Class Notes
-See ![Class Notes](class_notes.md)
+See [Class Notes](class_notes.md)
 
 
 ## License
