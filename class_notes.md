@@ -32,11 +32,56 @@ print(data)
 
 Connecting to the database via the shell may feel very natural when needing to run a report, adjust some data, or batch process a new set of data, but using raw SQL statements within a program has its limitations and security concerns, and wouldn't it be far easier to use python to interact with the database from a python program?
 
-## Advantages and Disadvantages
+## Advantages
+
+The Django ORM was once described to me as providing the means to scale developers, especially developers without strong DB knowledge.  I don't think this is entirely true, but, without knowing SQL or how a relational database is created or typed, someone using Django can write, request.user.first_name and have the string first name of the web user without having to know a database was involved. 
+
+1:1 parity between DB rows and Python objects
+Pooling and open connections
+Idiomatic Error handling
+Multiple databases
+
+## Disadvantages
+
+Constraints on modeling data (see SQLAlchemy vs. Django-ORM), what if an object is represented over multiple tables or a row in a table should represent multiple Python objects? 
+Bad queries: n+1
+Deep knowledge in making good queries: select-related, prefetch-related
+Configuration of DB is needed (though standard)
+SQL is not translated 1:1 to the ORM DSL
+New ideas like QuerySet
+JSONB anyone
+
+## CYOA
+
+Most ORMS allow the use of raw sql when desired. Normally, this is to fulfill one of two conditions: there's a complex query or unique query or stored procedure that the ORM cannot form or the ORM is getting in way and mangling a simple query. 
 
 
+## The Django ORM
 
-### Group By
+### Basics (99% of your time with Django-ORM)
+
+CRUD
+Filtering and Excluding
+Joins
+.all, .none, and .count
+Update (prevent race conditions) and Delete
+
+### Intermediate
+Aggregations: AVG, MAX, MIN, SUM
+Group By: COUNT
+Bulk create
+
+### Advanced
+
+Select related & prefetch related
+Q
+F
+Extending Query and QuerySet
+.raw and .extra
+connection queries & cache (profiling and debugging)
+
+
+### Group By Example
 
 #### Django
 
