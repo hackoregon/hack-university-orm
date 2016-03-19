@@ -21,6 +21,8 @@ pip install -r requirements.txt
 createdb orms
 cd orms
 python manage.py migrate
+python manage.py runserver
+# open your browser to localhost:8000
 ```
 
 The `migrate` command will produce output similar to:
