@@ -25,6 +25,9 @@ If you've already installed the dependencies you can activate the virtual enviro
 source .virt/bin/activate
 ```
 
+### Class Notes
+See ![Class Notes](class_notes.md)
+
 
 ## License
 The MIT License (MIT)
