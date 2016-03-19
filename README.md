@@ -21,8 +21,6 @@ pip install -r requirements.txt
 createdb orms
 cd orms
 python manage.py migrate
-python manage.py runserver
-# open your browser to localhost:8000
 ```
 
 The `migrate` command will produce output similar to:
@@ -43,6 +41,13 @@ Running migrations:
   Applying auth.0006_require_contenttypes_0002... OK
   Applying auth.0007_alter_validators_add_error_messages... OK
   Applying sessions.0001_initial... OK
+```
+
+#### Congrats!
+You've set up the project, to view it start the Django development webserver and open your browser to [localhost:8000](http://localhost:8000).
+
+```bash
+python manage.py runserver
 ```
 
 ### Coming back to the project
