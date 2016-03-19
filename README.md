@@ -60,6 +60,13 @@ source .virt/bin/activate
 ### Class Notes
 See [Class Notes](class_notes.md)
 
+### Loading data for the exercises
+Data has been saved to seed the data base for various parts of the class, to load these you'll want to use the django `loaddata` command.
+
+```console
+python manage.py loaddata exercise-1.json
+```
+
 
 ## License
 The MIT License (MIT)
