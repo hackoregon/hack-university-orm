@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 
 
 class Ship(models.Model):
-    """A startship."""
+    """A starship."""
 
     name = models.CharField(max_length=128, unique=True)
     capacity = models.IntegerField(

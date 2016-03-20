@@ -88,7 +88,7 @@ While it's possible to use the Django ORM without a Django project and app, some
 
 ```py
 class Ship(models.Model):
-    """A startship."""
+    """A starship."""
 
     name = models.CharField(max_length=128, unique=True)
     capacity = models.IntegerField(
