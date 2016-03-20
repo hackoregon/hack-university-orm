@@ -76,6 +76,12 @@ In [33]: for c in Crimedataraw.objects.raw('SELECT * FROM crimedataraw'):
 
 ## The Django ORM
 
+Django provides a default ORM with their framework, other popular python ORMs are [SQLAlchemy](http://www.sqlalchemy.org/) and [records](https://pypi.python.org/pypi/records/).
+
+While it's possible to use the Django ORM without a Django project and app, some scaffolding is needed to satisfy its expected structure. See [Introspection](introspection).
+
+### Modeling Data
+
 ### Basics (99% of your time with Django-ORM)
 
 - Migrations
