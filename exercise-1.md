@@ -32,7 +32,7 @@ If you used `shell_plus` to enter the shell you likely have an `iPython` shell a
 
 If you don't, you'll need to import the python module representing the ORM model of a ship.
 
-```pycon
+```py
 In [1]: from logs.models import Ship
 
 In [2]: queryset = Ship.objects.all()
