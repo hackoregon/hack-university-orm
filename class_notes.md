@@ -82,6 +82,26 @@ While it's possible to use the Django ORM without a Django project and app, some
 
 ### Modeling Data
 
+>A model is the single, definitive source of information about your data. It contains the essential fields and behaviors of the data you’re storing. Generally, each model maps to a single database table.
+
+#### A sample model of a star ship
+
+```py
+class Ship(models.Model):
+    """A startship."""
+
+    name = models.CharField(max_length=128, unique=True)
+    capacity = models.IntegerField(
+        blank=True, null=True, help_text='Max number of passengers'
+    )
+    passengers = models.ManyToManyField(User, blank=True, related_name='ships')
+
+    def __unicode__(self):
+        """The string and unicode representation."""
+        return u'{self.name}'.format(self=self)
+```
+
+
 ### Basics (99% of your time with Django-ORM)
 
 - Migrations
