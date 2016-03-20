@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'orms',
         'HOST': 'localhost',
-        'USERNAME': os.environ.get('USER'),
+        'USER': os.environ.get('USER'),
     }
 }
 
