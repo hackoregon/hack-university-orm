@@ -32,11 +32,15 @@ If you used `shell_plus` to enter the shell you likely have an `iPython` shell a
 
 If you don't, you'll need to import the python module representing the ORM model of a ship.
 
-```py
-from logs.models import Ship
+```pycon
+In [1]: from logs.models import Ship
 
-queryset = Ship.objects.all()
+In [2]: queryset = Ship.objects.all()
 
-print(queryset.query)
-print(queryset)
+In [3]: print(queryset)
+[<Ship: USS Enterprise>, <Ship: USS Voyager>, <Ship: USS Orion>, <Ship: USS Luna>, <Ship: USS Ares>]
+
+In [4]: print(queryset.query)
+SELECT "logs_ship"."id", "logs_ship"."name", "logs_ship"."capacity" FROM "logs_ship"
+
 ```
