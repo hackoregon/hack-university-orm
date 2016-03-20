@@ -192,3 +192,24 @@ Here's the generated file for the `logs` app.
 
 ![orms_erd.png](orms/orms_erd.png)
 
+
+# Class Q/A
+
+How can we find the fields for a given model?
+```py
+In [46]: ship = Ship.objects.all()[0]
+
+In [47]: ship.__dict__
+Out[47]:
+{'_state': <django.db.models.base.ModelState at 0x7f2c3b3e7110>,
+ 'capacity': 2860,
+ 'id': 2,
+ 'name': u'USS Voyager'}
+
+In [48]: vars(ship)
+Out[48]:
+{'_state': <django.db.models.base.ModelState at 0x7f2c3b3e7110>,
+ 'capacity': 2860,
+ 'id': 2,
+ 'name': u'USS Voyager'}
+ ```

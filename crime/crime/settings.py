@@ -89,6 +89,7 @@ DATABASES = {
 if os.environ.get('USER') == 'vagrant':
     DATABASES['default']['PASSWORD'] = 'vagrant'
     DATABASES['default']['USER'] = 'vagrant'
+    DATABASES['default']['NAME'] = 'vagrant'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
