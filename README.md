@@ -13,14 +13,12 @@ I had to make the following modifications to the vagrant image:
  - sudo apt-get install libpq-dev postgresql-client-common
  - set up the vagrant user for access to postgres:
     - sudo su - postgres
-        createuser vagrant -s
-        exit
+    - createuser vagrant -s P  # set the password to vagrant
+    - exit
  - createdb vagrant
 
- 
+
 ## Quick start
-
-
 
 ```console
 # get the repo
