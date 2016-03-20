@@ -13,8 +13,6 @@ class Ship(models.Model):
         blank=True, null=True, help_text='Max number of passengers'
     )
     passengers = models.ManyToManyField(User, blank=True, related_name='ships')
-    # todo: add number of crew and passengers, and some way to determine if a
-    # passenger is crew or passenger
 
     def __unicode__(self):
         """Repr."""

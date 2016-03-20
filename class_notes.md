@@ -101,6 +101,7 @@ class Ship(models.Model):
         return u'{self.name}'.format(self=self)
 ```
 
+### Querying Data
 
 ### Basics (99% of your time with Django-ORM)
 
@@ -108,7 +109,7 @@ class Ship(models.Model):
 - CRUD
 - Filtering and Excluding
 - Joins
-- .all, .none, and .count
+- .all, .none, .count, .first, .last
 - Update (prevent race conditions) and Delete
 
 ### Intermediate
