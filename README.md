@@ -4,8 +4,6 @@ Intro to ORM
 ### Class Notes
 [Class Notes](class_notes.md)
 
-## Quick start
-
 #### A note for the vagrant box users
 I had to make the following modifications to the vagrant image:
 
@@ -18,6 +16,10 @@ I had to make the following modifications to the vagrant image:
         createuser vagrant -s
         exit
  - createdb vagrant
+
+ 
+## Quick start
+
 
 
 ```console
