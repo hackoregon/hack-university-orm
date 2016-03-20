@@ -6,6 +6,20 @@ Intro to ORM
 
 ## Quick start
 
+#### A note for the vagrant box users
+I had to make the following modifications to the vagrant image:
+
+ - `ssh-keygen` and add the id_rsa.pub to my github profile to git clone
+ - sudo apt-get update
+ - sudo apt-get upgrade
+ - sudo apt-get install libpq-dev postgresql-client-common
+ - set up the vagrant user for access to postgres:
+    - sudo su - postgres
+        createuser vagrant -s
+        exit
+ - createdb vagrant
+
+
 ```console
 # get the repo
 git clone git@github.com:hackoregon/hack-university-orm.git
@@ -14,6 +28,7 @@ cd hack-university-orm
 # create and activate the python virtual environment 
 virtualenv .virt
 source .virt/bin/activate
+# note if you're running this from the vagrant image, then you may need to install virtualenv: `sudo apt-get install virtualenv`
 
 # install the python requirements and dependencies
 pip install -U pip
