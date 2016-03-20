@@ -23,7 +23,7 @@ I had to make the following modifications to the vagrant image:
 
 ```console
 # get the repo
-git clone git@github.com:hackoregon/hack-university-orm.git
+git clone https://github.com/hackoregon/hack-university-orm.git
 cd hack-university-orm
 
 # create and activate the python virtual environment 
