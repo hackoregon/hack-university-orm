@@ -105,10 +105,10 @@ class Ship(models.Model):
 
 ### Basics (99% of your time with Django-ORM)
 
-- Migrations
 - CRUD
 - Filtering and Excluding
 - Joins
+- Migrations
 - .all, .none, .count, .first, .last
 - Update (prevent race conditions) and Delete
 
