@@ -10,10 +10,11 @@ I had to make the following modifications to the vagrant image:
  - `ssh-keygen` and add the id_rsa.pub to my github profile to git clone
  - sudo apt-get update
  - sudo apt-get upgrade
- - sudo apt-get install libpq-dev postgresql-client-common
+ - sudo apt-get install libpq-dev postgresql-client-common virtualenv
  - set up the vagrant user for access to postgres:
     - sudo su - postgres
-    - createuser vagrant -s P  # set the password to vagrant
+    - createuser vagrant -s P
+        - set the password to `vagrant`
     - exit
  - createdb vagrant
 
