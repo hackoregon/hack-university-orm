@@ -2,7 +2,7 @@
 
 ## Part 1 - set up your Django project
 
-Follow the instructions in the [README.md]('../README.md') Quick start to get your project up to speed. Check with the instructor before continuing.
+Follow the instructions in the [README.md](README.md) Quick start to get your project up to speed. Check with the instructor before continuing.
 
 ## Part 2 - load existing data
 
