@@ -50,7 +50,7 @@ So how many of the USS Ares ship's logs were made by users with a first name end
 
 ## Part 4 - double down
 
-What ships has user Isaias Leath written a log for?
+What ship(s) has user Isaias Leath written a log for?
 
 Hint: `user = User.objects.get(username='Isaias Leath')`
 Hint 2: The `distinct` method only returns unique results.

@@ -1,5 +1,5 @@
 # hack-university-orm
-Intro to ORM
+Intro to Object-relational mapping (ORM)
 
 ### Class Notes
 [Class Notes](class_notes.md)
